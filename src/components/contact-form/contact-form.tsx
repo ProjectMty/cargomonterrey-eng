@@ -32,7 +32,7 @@ const ContactForm = ({
   btnMessage,
 }: Props) => {
   const errorMsg = () =>
-    toast.error('Hubo un error al enviar tu mensaje, intentalo de nuevo.', {
+    toast.error('There was an error sending your message, please try again.', {
       position: 'top-right',
       autoClose: 5000,
       hideProgressBar: false,
@@ -76,7 +76,7 @@ const ContactForm = ({
       }
 
       await response.json();
-      toast.success('Gracias, tu mensaje ha sido enviado con éxito.', {
+      toast.success('Thank you, your message has been sent successfully.', {
         position: 'top-right',
         autoClose: 5000,
         hideProgressBar: false,
