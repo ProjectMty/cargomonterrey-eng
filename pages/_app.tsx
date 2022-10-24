@@ -15,7 +15,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <DefaultSeo
-        title='Cargo Monterrey - Applied Logistics'
+        title='Cargo Monterrey - International Logistics'
         description='Cargo Monterrey is more than a freight forwarder. We are your complete cross-border e-commerce solution!. We give certainty and insure the orders we handle.'
         canonical='https://cargomonterrey.com/'
         additionalMetaTags={[
@@ -26,7 +26,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           {
             name: 'keywords',
             content:
-              'Cargo Monterrey Applied Logistics, logistics, Online Shopping, Mexico, USA, Canada, China, Europe, Warehouse, PO BOX, Trade, Import, Export',
+              'Cargo Monterrey Applied Logistics, International Logistics, logistics, Online Shopping, Mexico, USA, Canada, China, Europe, Warehouse, PO BOX, Trade, Import, Export',
           },
           { name: 'author', content: 'Cargo Monterrey, Grayrids' },
         ]}
