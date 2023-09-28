@@ -12,7 +12,7 @@ const Costs = () => {
           <div>
             <h3 className='text-base font-bold lg:text-xl'>Service fees</h3>
             <p className='lg:text-lg'>
-              8.5% of sales price or $.50 per unit , whichever is higher
+              8.5% of sales price or $1.00 per unit , whichever is higher
             </p>
           </div>
           <div>
@@ -24,7 +24,7 @@ const Costs = () => {
           <div>
             <h3 className='text-base font-bold lg:text-xl'>Shipping fees</h3>
             <p className='lg:text-lg'>
-              $295 USD per 4' x 4' x 4' pallet up to 500 lbs
+              $315 USD per 4' x 4' x 4' pallet up to 500 lbs
             </p>
           </div>
         </div>
