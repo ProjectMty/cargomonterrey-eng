@@ -9,7 +9,7 @@ const Contact = () => {
       </h2>
       <ContactSection
         title='Start shipping today!'
-        phone='+1 956 284 6632'
+        phone='+1 956 451 7191'
         email='info@cargomty.com'
         btnMessage='Send'
         nameInput={{ label: 'Name', placeholder: 'Name' }}
