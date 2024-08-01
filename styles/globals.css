@@ -19,7 +19,6 @@ body {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -141,7 +140,7 @@ focus:outline-none lg:hidden;
   .hamburguer-top,
   .hamburguer-middle,
   .hamburguer-bottom {
-    @apply absolute top-0 left-0 h-[2px] w-6 rotate-0 bg-white transition-all duration-[0.5s];
+    @apply absolute left-0 top-0 h-[2px] w-6 rotate-0 bg-white transition-all duration-[0.5s];
   }
 
   .hamburguer-middle {

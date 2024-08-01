@@ -7,7 +7,7 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        sans: ['var(--font-poppins)', ...defaultTheme.fontFamily.sans],
       },
       contrast: {
         110: '1.10',

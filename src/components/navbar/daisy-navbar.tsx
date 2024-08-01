@@ -3,13 +3,14 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import CargoMtyLogo from '@/src/assets/logo-cargomty.webp';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 const DaisyNavbar = ({
   toggleDrawer,
   title = 'Cargo Monterrey Logo',
   hideButton = false,
 }: {
-  toggleDrawer: () => void;
+  toggleDrawer?: () => void;
   title?: string;
   hideButton?: boolean;
 }) => {
@@ -26,14 +27,23 @@ const DaisyNavbar = ({
         />
       </div>
       <div className='flex-none'>
-        <button
-          type='button'
-          className={clsx('btn btn-ghost btn-circle', hideButton && 'hidden')}
-          aria-label='open-menu'
-          onClick={toggleDrawer}
-        >
-          <FontAwesomeIcon icon={faBars} size='xl' />
-        </button>
+        {typeof toggleDrawer === 'function' ? (
+          <button
+            type='button'
+            className={clsx('btn btn-ghost btn-circle', hideButton && 'hidden')}
+            aria-label='open-menu'
+            onClick={toggleDrawer}
+          >
+            <FontAwesomeIcon icon={faBars} size='xl' />
+          </button>
+        ) : (
+          <Link
+            href='#contact'
+            className='btn btn-primary border-[#4043ff] bg-[#4043ff] text-white shadow'
+          >
+            Get Started
+          </Link>
+        )}
       </div>
     </nav>
   );

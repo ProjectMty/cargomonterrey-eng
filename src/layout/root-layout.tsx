@@ -1,16 +1,16 @@
-import { Drawer, Footer } from '@/src/components';
-import { MENU_ITEMS } from '@/src/components/navbar/routes';
 import { PropsWithChildren } from 'react';
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-poppins',
+  display: 'swap',
+  preload: true,
+});
 
 const RootLayout = ({ children }: PropsWithChildren) => {
-  return (
-    <div id='theme' data-theme='cargomty'>
-      <Drawer items={MENU_ITEMS} navbarLogo='Cargo E-commerce'>
-        {children}
-        <Footer />
-      </Drawer>
-    </div>
-  );
+  return <main className={`${poppins.variable} font-sans`}>{children}</main>;
 };
 
 export default RootLayout;
