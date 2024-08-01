@@ -1,5 +1,4 @@
-import { Banner, Drawer, Footer } from '@/src/components';
-import { MENU_ITEMS } from '@/src/components/navbar/routes';
+import { Banner } from '@/src/components';
 import {
   CompetitiveRates,
   Contact,
@@ -13,7 +12,7 @@ import {
 
 const Home = () => {
   return (
-    <Drawer items={MENU_ITEMS} navbarLogo='Cargo E-commerce'>
+    <>
       <Banner>
         Shipping your inventory and fulfilling{' '}
         <strong className='text-bold'>
@@ -29,8 +28,7 @@ const Home = () => {
       <Process />
       <Ecommerce />
       <Contact />
-      <Footer />
-    </Drawer>
+    </>
   );
 };
 

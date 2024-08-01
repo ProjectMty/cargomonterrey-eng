@@ -46,27 +46,25 @@ const ContactSection = ({
         <div className='space-y-6 lg:flex lg:flex-col lg:space-y-12 lg:px-6'>
           {location && (
             <ContactIcon icon={faLocationDot}>
-              <Link href={location.link}>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='inline-block hover:underline'
-                >
-                  {location.label}
-                </a>
+              <Link
+                href={location.link}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-block hover:underline'
+              >
+                {location.label}
               </Link>
             </ContactIcon>
           )}
           {phone && (
             <ContactIcon icon={faPhone}>
-              <Link href={`tel:+${phoneStringToLink(phone)}`}>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='inline-block hover:underline'
-                >
-                  {phone}
-                </a>
+              <Link
+                href={`tel:+${phoneStringToLink(phone)}`}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-block hover:underline'
+              >
+                {phone}
               </Link>
             </ContactIcon>
           )}
@@ -76,28 +74,24 @@ const ContactSection = ({
                 <Link
                   key={tel}
                   href={`https://wa.me/${phoneStringToLink(tel)}`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='block hover:underline'
                 >
-                  <a
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='block hover:underline'
-                  >
-                    {tel}
-                  </a>
+                  {tel}
                 </Link>
               ))}
             </ContactIcon>
           )}
           {email && (
             <ContactIcon icon={faEnvelope}>
-              <Link href={`mailto:${email}`}>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='inline-block break-all hover:underline'
-                >
-                  {email}
-                </a>
+              <Link
+                href={`mailto:${email}`}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-block break-all hover:underline'
+              >
+                {email}
               </Link>
             </ContactIcon>
           )}

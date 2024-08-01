@@ -26,7 +26,7 @@ const config = {
     theme: true,
     themes: [
       {
-        mytheme: {
+        cargomty: {
           primary: '#3926ae',
           secondary: '#4ecdc4',
           accent: '#6750fa',

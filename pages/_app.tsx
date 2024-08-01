@@ -8,10 +8,14 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'animate.css/animate.min.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import 'react-toastify/dist/ReactToastify.min.css';
+import RootLayout from '@/src/layout/root-layout';
 
 config.autoAddCss = false;
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const element =
+    process.env.NODE_ENV === 'production' ? 'recaptcha-container' : undefined;
+
   return (
     <>
       <DefaultSeo
@@ -48,16 +52,21 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       />
       <GoogleReCaptchaProvider
         reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+        language='en'
+        container={{
+          element,
+          parameters: {
+            badge: 'bottomleft', // optional, default undefined
+          },
+        }}
         scriptProps={{
-          async: false, // optional, default to false,
-          defer: true, // optional, default to false
-          appendTo: 'head', // optional, default to "head", can be "head" or "body",
-          nonce: undefined,
+          defer: true,
+          async: true,
         }}
       >
-        <div id='theme' data-theme='mytheme'>
+        <RootLayout>
           <Component {...pageProps} />
-        </div>
+        </RootLayout>
       </GoogleReCaptchaProvider>
     </>
   );

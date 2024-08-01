@@ -11,10 +11,13 @@ const Ecommerce = () => {
         <br />
         for <strong>Mexico</strong>
       </h2>
-      <Link href='https://cargomty.com/'>
-        <a className='btn glass px-7' target='_blank' rel='noopener noreferrer'>
-          Find out more
-        </a>
+      <Link
+        href='https://cargomty.com/'
+        className='btn glass px-7 uppercase text-white hover:text-black'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        Find out more
       </Link>
     </section>
   );

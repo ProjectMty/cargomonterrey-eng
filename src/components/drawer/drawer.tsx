@@ -21,7 +21,7 @@ const Drawer = ({ navbarLogo, items, children }: Props) => {
   return (
     <div className='drawer drawer-end'>
       <input
-        id='my-drawer-3'
+        id='drawer-toggle'
         type='checkbox'
         className='drawer-toggle'
         checked={drawer}
@@ -32,14 +32,16 @@ const Drawer = ({ navbarLogo, items, children }: Props) => {
         {/* <!-- Page content here --> */}
         {children}
       </div>
-      <div className='drawer-side'>
-        <label htmlFor='my-drawer-3' className='drawer-overlay' />
-        <ul className='menu w-80 overflow-y-auto bg-base-100 p-4'>
+      <div className='drawer-side z-20'>
+        <label
+          htmlFor='drawer-toggle'
+          aria-label='close sidebar'
+          className='drawer-overlay'
+        />
+        <ul className='menu min-h-full w-80 overflow-y-auto bg-base-100 p-4'>
           {items.map(({ title, href }) => (
             <li key={href} onClick={toggleDrawer}>
-              <Link href={`#${href}`}>
-                <a>{title}</a>
-              </Link>
+              <Link href={`#${href}`}>{title}</Link>
             </li>
           ))}
         </ul>

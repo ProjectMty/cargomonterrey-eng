@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import CargoMtyLogo from '@/src/assets/logo-cargomty.webp';
 import clsx from 'clsx';
 
@@ -14,7 +14,7 @@ const DaisyNavbar = ({
   hideButton?: boolean;
 }) => {
   return (
-    <nav className='navbar sticky top-0 z-[200] bg-base-100 shadow-xl'>
+    <nav className='navbar sticky top-0 z-10 bg-base-100 shadow-xl'>
       <div className='flex-1'>
         <Image
           width={1079}

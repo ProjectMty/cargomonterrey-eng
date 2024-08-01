@@ -57,12 +57,15 @@ const ContactForm = ({
     }
 
     try {
+      setLoading(true);
+
       const token = await executeRecaptcha();
+
       if (!token) {
+        errorMsg();
         return;
       }
 
-      setLoading(true);
       const response = await fetch(`/api/contact-form`, {
         method: 'POST',
         headers: {
@@ -73,6 +76,7 @@ const ContactForm = ({
 
       if (!response.ok) {
         errorMsg();
+        return;
       }
 
       await response.json();

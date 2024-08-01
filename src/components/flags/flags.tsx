@@ -1,4 +1,4 @@
-import Image from 'next/future/image';
+import Image from 'next/image';
 import MexicoFlag from '@/src/assets/flags/mexico.png';
 import UsFlag from '@/src/assets/flags/united-states.png';
 import CanadaFlag from '@/src/assets/flags/canada.png';
