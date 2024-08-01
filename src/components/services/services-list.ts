@@ -17,7 +17,7 @@ import {
   faTruckFast,
   faVanShuttle,
 } from '@fortawesome/free-solid-svg-icons';
-import { ServicesList } from './types';
+import { type ServicesList } from './types';
 
 export const spanishServicesList: ServicesList[] = [
   {

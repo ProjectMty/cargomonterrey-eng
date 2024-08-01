@@ -1,4 +1,4 @@
-import { ServiceItemProps } from './service-item';
+import { type ServiceItemProps } from './service-item';
 
 export type ServicesList = ServiceItemProps & {
   place: 'one' | 'two' | 'three';

@@ -1,20 +1,19 @@
-import { config } from '@fortawesome/fontawesome-svg-core';
-import { DefaultSeo } from 'next-seo';
-import type { AppProps } from 'next/app';
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
-
 import '@/styles/globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'animate.css/animate.min.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import 'react-toastify/dist/ReactToastify.min.css';
-import RootLayout from '@/src/layout/root-layout';
+
+import RootLayout from '@/layout/root-layout';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import { DefaultSeo } from 'next-seo';
+import type { AppProps } from 'next/app';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 config.autoAddCss = false;
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const element =
-    process.env.NODE_ENV === 'production' ? 'recaptcha-container' : undefined;
+  const element = process.env.NODE_ENV === 'production' ? 'recaptcha-container' : undefined;
 
   return (
     <>
@@ -51,7 +50,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         }}
       />
       <GoogleReCaptchaProvider
-        reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+        reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
         language='en'
         container={{
           element,

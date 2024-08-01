@@ -1,8 +1,11 @@
-/* eslint-disable */
-const defaultTheme = require('tailwindcss/defaultTheme');
+import headlessui from '@headlessui/tailwindcss';
+import typography from '@tailwindcss/typography';
+import daisy from 'daisyui';
+import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
-const config = {
+const config: Config = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -17,11 +20,7 @@ const config = {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('daisyui'),
-    require('@headlessui/tailwindcss'),
-  ],
+  plugins: [typography, daisy, headlessui],
   daisyui: {
     theme: true,
     themes: [
@@ -40,6 +39,6 @@ const config = {
       },
     ],
   },
-};
+} satisfies Config;
 
-module.exports = config;
+export default config;

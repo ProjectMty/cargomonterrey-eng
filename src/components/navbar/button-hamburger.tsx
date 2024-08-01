@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { MenuProps } from './types';
+import { type MenuProps } from './types';
 
 const ButtonHamburger = ({ isOpen, handleOpenItem }: MenuProps) => {
   return (

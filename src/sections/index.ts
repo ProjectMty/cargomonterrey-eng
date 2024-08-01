@@ -1,21 +1,9 @@
-import CompetitiveRates from './competitive-rates';
-import Contact from './contact';
-import Costs from './costs';
-import Ecommerce from './ecommerce';
-import NotPermitted from './not-permitted';
-import OrderFulfillment from './order-fulfillment';
-import Process from './process';
-import Services from './services';
-import Us from './us';
-
-export {
-  Services,
-  Us,
-  OrderFulfillment,
-  CompetitiveRates,
-  Costs,
-  Process,
-  NotPermitted,
-  Ecommerce,
-  Contact,
-};
+export { default as CompetitiveRates } from './competitive-rates';
+export { default as Contact } from './contact';
+export { default as Costs } from './costs';
+export { default as Ecommerce } from './ecommerce';
+export { default as NotPermitted } from './not-permitted';
+export { default as OrderFulfillment } from './order-fulfillment';
+export { default as Process } from './process';
+export { default as Services } from './services';
+export { default as Us } from './us';

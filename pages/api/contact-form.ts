@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next';
 import sendgrid from '@sendgrid/mail';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Body = {
   name: string;
@@ -11,7 +14,7 @@ type Body = {
 };
 
 const verifyRecaptcha = async (token: string) => {
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY as string;
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY!;
 
   const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
 
@@ -32,10 +35,7 @@ const verifyRecaptcha = async (token: string) => {
   };
 };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method !== 'POST') {
       return res.status(400).json({ message: 'Invalid method' });
@@ -47,13 +47,7 @@ export default async function handler(
 
     const data = JSON.parse(req.body);
 
-    if (
-      !data.name ||
-      !data.phone ||
-      !data.email ||
-      !data.subject ||
-      !data.token
-    ) {
+    if (!data?.name || !data?.phone || !data?.email || !data?.subject || !data?.token) {
       return res.status(400).json({ message: 'Invalid data' });
     }
 
@@ -65,11 +59,11 @@ export default async function handler(
       return res.status(400).json({ message: 'Invalid token' });
     }
 
-    sendgrid.setApiKey(process.env.SENDGRID_API_KEY as string);
+    sendgrid.setApiKey(process.env.SENDGRID_API_KEY!);
 
     await sendgrid.send({
-      to: process.env.SENDGRID_TO_EMAIL as string,
-      from: process.env.SENDGRID_FROM_EMAIL as string,
+      to: process.env.SENDGRID_TO_EMAIL!,
+      from: process.env.SENDGRID_FROM_EMAIL!,
       subject: 'Nuevo prospecto desde cargomonterrey.com',
       text: 'Se ha registrado un prospecto a través de cargomonterrey.com (e-commerce)',
       html: `
@@ -95,9 +89,7 @@ export default async function handler(
     });
 
     return res.status(200).json({ message: 'Ok' });
-  } catch (error) {
-    return res
-      .status(500)
-      .json({ message: 'Something went wrong, please try again.' });
+  } catch {
+    return res.status(500).json({ message: 'Something went wrong, please try again.' });
   }
 }

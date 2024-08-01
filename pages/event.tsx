@@ -1,10 +1,9 @@
-import { Banner, DaisyNavbar, Footer } from '@/src/components';
-import { Contact } from '@/src/sections';
+import { Banner, DaisyNavbar, Footer } from '@/components';
+import { Contact } from '@/sections';
 
 const classesTitle = 'text-xl font-bold md:text-3xl xl:text-4xl';
 
-const classesSubtitle =
-  'text-lg font-bold text-primary md:text-2xl xl:text-3xl';
+const classesSubtitle = 'text-lg font-bold text-primary md:text-2xl xl:text-3xl';
 
 const classesText = 'text-base md:text-lg xl:text-2xl';
 
@@ -12,8 +11,7 @@ const services = [
   {
     icon: '',
     title: 'RFC',
-    description:
-      'Strategic locations in the US and cross into Mexico within 1 business day',
+    description: 'Strategic locations in the US and cross into Mexico within 1 business day',
   },
   {
     icon: '',
@@ -29,8 +27,7 @@ const services = [
   {
     icon: '',
     title: 'Speed And Efficiency',
-    description:
-      'Strategic locations in the US and cross into Mexico within 1 business day',
+    description: 'Strategic locations in the US and cross into Mexico within 1 business day',
   },
   {
     icon: '',
@@ -61,24 +58,23 @@ const EventPage = () => {
       <section>
         <p className={classesTitle}>
           Growing your international sales has never been easier with{' '}
-          <span className='text-primary'>Cargo Monterrey</span> your trusted
-          logistics partner making it possible and fast!
+          <span className='text-primary'>Cargo Monterrey</span> your trusted logistics partner
+          making it possible and fast!
         </p>
       </section>
-      <section className='justify-between flex flex-row'>
+      <section className='flex flex-row justify-between'>
         <div className='w-full space-y-16 text-base md:w-2/3 md:text-xl xl:text-3xl'>
           <p className={classesText}>
             We have been delivering excellence for{' '}
             <span className='font-medium'>more than 17 years</span>.
           </p>
           <p className={classesText}>
-            <span className='font-medium'>Cargo Monterrey</span> understands the
-            complexities of global shipping and provide a unique solutions
-            tailored to fit your needs.
+            <span className='font-medium'>Cargo Monterrey</span> understands the complexities of
+            global shipping and provide a unique solutions tailored to fit your needs.
           </p>
           <p className={classesText}>
-            Enjoy competitive rates that fit your budget without compromising on
-            quality or reliability.
+            Enjoy competitive rates that fit your budget without compromising on quality or
+            reliability.
           </p>
         </div>
         <div className='size-32 bg-primary' />
@@ -86,23 +82,20 @@ const EventPage = () => {
       <div className='mx-auto h-32 w-64 bg-primary' />
       <section className='space-y-16'>
         <p className={classesTitle}>
-          <span className='text-[#5849b0]'>ASD MarketWeek</span>, the perfect
-          opportunity to discover reliable logistics solutions that can elevate
-          your business operations to Mexico!
+          <span className='text-[#5849b0]'>ASD MarketWeek</span>, the perfect opportunity to
+          discover reliable logistics solutions that can elevate your business operations to Mexico!
         </p>
         <p className={classesSubtitle}>Expand Into Mexico with Ease!</p>
 
         <p className={classesText}>
-          <span className='block font-medium'>
-            Looking to expand into the Mexican market?
-          </span>{' '}
+          <span className='block font-medium'>Looking to expand into the Mexican market?</span>{' '}
           Cargo Monterrey makes it easy.
         </p>
 
         <p className={classesText}>
-          We offer specialized services to help you navigate all of the
-          variables of cross- border logistics, our gol is to have your products
-          reach Mexican customers and marketplaces quickly and efficiently.
+          We offer specialized services to help you navigate all of the variables of cross- border
+          logistics, our gol is to have your products reach Mexican customers and marketplaces
+          quickly and efficiently.
         </p>
       </section>
       <section>
@@ -123,17 +116,16 @@ const EventPage = () => {
       <section>
         <p className={classesSubtitle}>Your Business, Our Priority!</p>
         <p className={classesText}>
-          Let's discuss how we can help you ship your merchandise to Mexico
-          while saving time and money!
+          Let&apos;s discuss how we can help you ship your merchandise to Mexico while saving time
+          and money!
         </p>
         <p className={classesText}>
-          We're here to help you expand your business into Mexico and reach new
-          heights.
+          We&apos;re here to help you expand your business into Mexico and reach new heights.
         </p>
         <p className={classesText}>
           We look forward to connecting with you at{' '}
-          <span className='font-medium text-[#5849b0]'>ASD Market Week</span>{' '}
-          and exploring how we can support your logistics needs.
+          <span className='font-medium text-[#5849b0]'>ASD Market Week</span> and exploring how we
+          can support your logistics needs.
         </p>
       </section>
       <Contact title={false} />

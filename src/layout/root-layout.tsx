@@ -1,5 +1,5 @@
-import { PropsWithChildren } from 'react';
 import { Poppins } from 'next/font/google';
+import { type PropsWithChildren } from 'react';
 
 const poppins = Poppins({
   subsets: ['latin'],

@@ -1,9 +1,4 @@
-import { Faq, StepContainer } from '@/src/components';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Disclosure } from '@headlessui/react';
-import clsx from 'clsx';
-import { useMemo } from 'react';
+import { Faq, StepContainer } from '@/components';
 
 const steps = [
   'Create your sales plan to decide what products you will be sending to Amazon FBA, Mercado Libre Full, or direct to client.',

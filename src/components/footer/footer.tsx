@@ -1,8 +1,8 @@
 import {
   faFacebookF,
   faInstagram,
-  faYoutube,
   faLinkedinIn,
+  faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
@@ -19,7 +19,7 @@ const Footer = () => {
         >
           <FontAwesomeIcon
             icon={faFacebookF}
-            className='h-4 w-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
+            className='size-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
           />
         </Link>
         <Link
@@ -30,7 +30,7 @@ const Footer = () => {
         >
           <FontAwesomeIcon
             icon={faInstagram}
-            className='h-4 w-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
+            className='size-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
           />
         </Link>
         <Link
@@ -41,7 +41,7 @@ const Footer = () => {
         >
           <FontAwesomeIcon
             icon={faYoutube}
-            className='h-4 w-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
+            className='size-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
           />
         </Link>
         <Link
@@ -52,13 +52,13 @@ const Footer = () => {
         >
           <FontAwesomeIcon
             icon={faLinkedinIn}
-            className='h-4 w-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
+            className='size-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
           />
         </Link>
       </div>
       {/* <p>Aviso de privacidad - Términos y condiciones</p> */}
       <div>
-        <p>Copyright © 2022. Cargo Monterrey.</p>
+        <p>Copyright © {new Date().getFullYear()}. Cargo Monterrey.</p>
         {/* <p>Todos los derechos reservados.</p> */}
       </div>
     </footer>

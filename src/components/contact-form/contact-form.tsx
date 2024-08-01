@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { type SubmitHandler, useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 
 type InputProps = {
@@ -24,13 +24,7 @@ type ContactFormFields = {
   subject: string;
 };
 
-const ContactForm = ({
-  nameInput,
-  phoneInput,
-  emailInput,
-  subjectInput,
-  btnMessage,
-}: Props) => {
+const ContactForm = ({ nameInput, phoneInput, emailInput, subjectInput, btnMessage }: Props) => {
   const errorMsg = () =>
     toast.error('There was an error sending your message, please try again.', {
       position: 'top-right',
@@ -91,9 +85,9 @@ const ContactForm = ({
         theme: 'colored',
       });
       reset();
-    } catch (err) {
+    } catch (error) {
       // eslint-disable-next-line no-console
-      console.error(err);
+      console.error(error);
       errorMsg();
     } finally {
       setLoading(false);
@@ -105,7 +99,7 @@ const ContactForm = ({
       className='space-y-2 rounded-2xl bg-dark-primary p-8 lg:w-1/2 lg:rounded-l-none lg:bg-[#21165FB2]'
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className='group form-control w-full '>
+      <div className='group form-control w-full'>
         <label className='label' htmlFor='name'>
           <span
             className={clsx(
@@ -121,13 +115,13 @@ const ContactForm = ({
           type='text'
           placeholder={nameInput.placeholder}
           className={clsx(
-            'input input-bordered w-full text-black  placeholder:text-gray-400 group-focus-within:input-secondary',
+            'input input-bordered w-full text-black group-focus-within:input-secondary placeholder:text-gray-400',
             errors.name && 'input-error group-focus-within:input-error',
           )}
           {...register('name', { required: true })}
         />
       </div>
-      <div className='group form-control w-full '>
+      <div className='group form-control w-full'>
         <label className='label' htmlFor='phone'>
           <span
             className={clsx(
@@ -143,13 +137,13 @@ const ContactForm = ({
           type='text'
           placeholder={phoneInput.placeholder}
           className={clsx(
-            'input input-bordered w-full text-black  placeholder:text-gray-400 group-focus-within:input-secondary',
+            'input input-bordered w-full text-black group-focus-within:input-secondary placeholder:text-gray-400',
             errors.phone && 'input-error group-focus-within:input-error',
           )}
           {...register('phone', { required: true })}
         />
       </div>
-      <div className='group form-control w-full '>
+      <div className='group form-control w-full'>
         <label className='label' htmlFor='email'>
           <span
             className={clsx(
@@ -165,13 +159,13 @@ const ContactForm = ({
           type='email'
           placeholder={emailInput.placeholder}
           className={clsx(
-            'input input-bordered w-full text-black  placeholder:text-gray-400 group-focus-within:input-secondary',
+            'input input-bordered w-full text-black group-focus-within:input-secondary placeholder:text-gray-400',
             errors.email && 'input-error group-focus-within:input-error',
           )}
           {...register('email', { required: true })}
         />
       </div>
-      <div className='group form-control w-full '>
+      <div className='group form-control w-full'>
         <label className='label' htmlFor='subject'>
           <span
             className={clsx(
@@ -186,9 +180,8 @@ const ContactForm = ({
           id='subject'
           placeholder={subjectInput.placeholder}
           className={clsx(
-            'textarea textarea-bordered min-h-16 h-36 max-h-48 w-full resize-y text-black placeholder:text-gray-400 group-focus-within:textarea-secondary',
-            errors.subject &&
-              'textarea-error group-focus-within:textarea-error',
+            'textarea textarea-bordered h-36 max-h-48 min-h-16 w-full resize-y text-black group-focus-within:textarea-secondary placeholder:text-gray-400',
+            errors.subject && 'textarea-error group-focus-within:textarea-error',
           )}
           {...register('subject', { required: true })}
         />

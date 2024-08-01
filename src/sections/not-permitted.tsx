@@ -1,4 +1,4 @@
-import { AdventagesContainer } from '@/src/components';
+import { AdventagesContainer } from '@/components';
 import { faApple } from '@fortawesome/free-brands-svg-icons';
 import {
   faCoins,
@@ -63,8 +63,7 @@ const notAllow = [
   },
   {
     icon: faCoins,
-    title:
-      'Currency (bills or coins), checks, money orders, or other negotiable form of currency',
+    title: 'Currency (bills or coins), checks, money orders, or other negotiable form of currency',
   },
 ];
 
@@ -72,8 +71,7 @@ const NotPermitted = () => {
   return (
     <section id='not-permitted'>
       <h2>
-        What items are <span className='font-bold'>NOT</span> permitted to enter
-        into Mexico?
+        What items are <span className='font-bold'>NOT</span> permitted to enter into Mexico?
       </h2>
       <AdventagesContainer rows='2' advantages={notAllow} />
     </section>

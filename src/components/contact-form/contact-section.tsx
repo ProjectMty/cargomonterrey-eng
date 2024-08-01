@@ -1,10 +1,6 @@
-import { phoneStringToLink } from '@/src/utils';
+import { phoneStringToLink } from '@/utils';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import {
-  faEnvelope,
-  faLocationDot,
-  faPhone,
-} from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import ContactForm from './contact-form';
 import ContactIcon from './contact-icon';

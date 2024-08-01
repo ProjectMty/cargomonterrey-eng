@@ -3,8 +3,8 @@ import {
   DesktopServices,
   engServicesList,
   MobileServices,
-} from '@/src/components';
-import { useMediaQuery } from '@/src/hooks';
+} from '@/components';
+import { useMediaQuery } from '@/hooks';
 
 const servicesAdventages = [
   { title: 'Affordable Pallet Storage (pallet-in/pallet out warehousing)' },
@@ -29,22 +29,20 @@ const Services = () => {
         </h3>
         <div className='responsive-block-space text-justify'>
           <p>
-            Cargo Monterrey can be your freight forwarding solution for all of
-            your North American business. You can have one consistent logistics
-            partner to facilitate the transportation of your palletized product
-            between locations in the US, Mexico, and Canada.
+            Cargo Monterrey can be your freight forwarding solution for all of your North American
+            business. You can have one consistent logistics partner to facilitate the transportation
+            of your palletized product between locations in the US, Mexico, and Canada.
           </p>
           <p>
-            Our experienced team of 3PL professionals offers a fully custom
-            freight forwarding package tailored to your needs. Your needs. Your
-            custom pricing. We understand every product, every marketplace, and
-            every margin is different.
+            Our experienced team of 3PL professionals offers a fully custom freight forwarding
+            package tailored to your needs. Your needs. Your custom pricing. We understand every
+            product, every marketplace, and every margin is different.
           </p>
         </div>
       </section>
       <section id='services-list' className='w-full max-w-full p-0'>
         {isLg ? (
-          <div className=' w-full'>
+          <div className='w-full'>
             <MobileServices servicesList={engServicesList} />
           </div>
         ) : (
@@ -53,15 +51,13 @@ const Services = () => {
       </section>
       <section id='warehousing-solutions' className='text-justify'>
         <p>
-          Warehousing Solutions for Short-Term and Long-Term Plans. Ship your
-          pallet to the US and we'll import it and ship it out to Mexico! We
-          even take care of customs clearance!
+          Warehousing Solutions for Short-Term and Long-Term Plans. Ship your pallet to the US and
+          we&apos;ll import it and ship it out to Mexico! We even take care of customs clearance!
         </p>
         <p>
-          Even though the inventory isn't in your warehouse, you are still in
-          control every step of the way! Cargo Monterrey ensures client's stay
-          in touch with their inventory while it is in the warehouse and while
-          it is in transit.
+          Even though the inventory isn&apos;t in your warehouse, you are still in control every
+          step of the way! Cargo Monterrey ensures client&apos;s stay in touch with their inventory
+          while it is in the warehouse and while it is in transit.
         </p>
 
         <AdventagesContainer advantages={servicesAdventages} />

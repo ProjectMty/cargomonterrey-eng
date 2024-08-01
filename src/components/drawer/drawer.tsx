@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import Link from 'next/link';
-import { ReactNode, useState } from 'react';
+import { type ReactNode, useState } from 'react';
 import { DaisyNavbar } from '../navbar';
-import { MENU_ITEMS } from '../navbar/routes';
+import { type MENU_ITEMS } from '../navbar/routes';
 
 type Props = {
   navbarLogo: string;
@@ -33,12 +33,8 @@ const Drawer = ({ navbarLogo, items, children }: Props) => {
         {children}
       </div>
       <div className='drawer-side z-20'>
-        <label
-          htmlFor='drawer-toggle'
-          aria-label='close sidebar'
-          className='drawer-overlay'
-        />
-        <ul className='menu min-h-full w-80 overflow-y-auto bg-base-100 p-4'>
+        <label htmlFor='drawer-toggle' aria-label='close sidebar' className='drawer-overlay' />
+        <ul className='menu min-h-full w-80 overflow-y-auto bg-base-100 p-4 text-lg'>
           {items.map(({ title, href }) => (
             <li key={href} onClick={toggleDrawer}>
               <Link href={`#${href}`}>{title}</Link>

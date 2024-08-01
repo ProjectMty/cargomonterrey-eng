@@ -1,12 +1,11 @@
-import { ContactSection } from '@/src/components';
+import { ContactSection } from '@/components';
 
 const Contact = ({ title = true }: { title?: boolean }) => {
   return (
     <section id='contact'>
       {title && (
         <h2 className='sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl'>
-          Contact us today to discuss how we can launch your e-commerce business
-          in Mexico today!
+          Contact us today to discuss how we can launch your e-commerce business in Mexico today!
         </h2>
       )}
       <ContactSection

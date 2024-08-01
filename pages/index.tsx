@@ -1,5 +1,5 @@
-import { Banner, Drawer, Footer } from '@/src/components';
-import { MENU_ITEMS } from '@/src/components/navbar/routes';
+import { Banner, Drawer, Footer } from '@/components';
+import { MENU_ITEMS } from '@/components/navbar/routes';
 import {
   CompetitiveRates,
   Contact,
@@ -9,16 +9,14 @@ import {
   Process,
   Services,
   Us,
-} from '@/src/sections';
+} from '@/sections';
 
 const Home = () => {
   return (
     <Drawer items={MENU_ITEMS} navbarLogo='Cargo E-commerce'>
       <Banner>
         Shipping your inventory and fulfilling{' '}
-        <strong className='text-bold'>
-          your sales to mexico has never been easier!
-        </strong>
+        <strong className='font-bold'>your sales to mexico has never been easier!</strong>
       </Banner>
       <Us />
       <div className='services-separator' />

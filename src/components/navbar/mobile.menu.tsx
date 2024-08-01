@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { MENU_ITEMS } from './routes';
-import { MenuProps } from './types';
+import { type MenuProps } from './types';
 
 const MobileMenu = ({ isOpen, handleOpenItem }: MenuProps) => {
   return (

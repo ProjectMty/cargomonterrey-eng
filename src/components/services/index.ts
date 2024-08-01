@@ -1,12 +1,4 @@
-import DesktopServices from './desktop-services';
-import MobileServices from './mobile-services';
-import ServiceItem from './service-item';
-import { engServicesList, spanishServicesList } from './services-list';
-
-export {
-  DesktopServices,
-  MobileServices,
-  ServiceItem,
-  engServicesList,
-  spanishServicesList,
-};
+export { default as DesktopServices } from './desktop-services';
+export { default as MobileServices } from './mobile-services';
+export { default as ServiceItem } from './service-item';
+export { engServicesList, spanishServicesList } from './services-list';

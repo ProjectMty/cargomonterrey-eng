@@ -1,3 +1,1 @@
-import WeightLbs from './weight-lbs';
-
-export { WeightLbs };
+export { default as WeightLbs } from './weight-lbs';

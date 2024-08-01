@@ -1,7 +1,7 @@
 import { Carousel } from 'react-responsive-carousel';
 import * as R from 'remeda';
 import ServiceItem from './service-item';
-import { ServicesList } from './types';
+import { type ServicesList } from './types';
 
 const MobileServices = ({ servicesList }: { servicesList: ServicesList[] }) => {
   const services = R.groupBy(servicesList, (x) => x.place);
@@ -16,21 +16,21 @@ const MobileServices = ({ servicesList }: { servicesList: ServicesList[] }) => {
       showThumbs={false}
     >
       <div className='flex h-full flex-col justify-between space-y-8'>
-        {services.one.map(({ id, ...props }) => (
+        {services?.one?.map(({ id, ...props }) => (
           <div key={id}>
             <ServiceItem {...props} />
           </div>
         ))}
       </div>
       <div className='flex h-full flex-col justify-between space-y-8'>
-        {services.two.map(({ id, ...props }) => (
+        {services?.two?.map(({ id, ...props }) => (
           <div key={id}>
             <ServiceItem {...props} />
           </div>
         ))}
       </div>
       <div className='flex h-full flex-col justify-between space-y-8'>
-        {services.three.map(({ id, ...props }) => (
+        {services?.three?.map(({ id, ...props }) => (
           <div key={id}>
             <ServiceItem {...props} />
           </div>

@@ -1,3 +1,1 @@
-import Faq from './faq';
-
-export { Faq };
+export { default as Faq } from './faq';

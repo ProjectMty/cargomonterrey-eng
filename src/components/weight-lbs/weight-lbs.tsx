@@ -15,7 +15,7 @@ const WeightLbs = () => {
 
   return (
     <div className='flex w-full flex-row rounded-2xl bg-[rgba(170,170,170,0.3)] shadow-2xl sm:w-2/3 lg:w-full'>
-      <div className='lg:flex-center grow-[0.8] rounded-l-2xl bg-secondary py-7 px-2 text-sm lg:grow-[0.4] lg:text-lg'>
+      <div className='lg:flex-center grow-[0.8] rounded-l-2xl bg-secondary px-2 py-7 text-sm lg:grow-[0.4] lg:text-lg'>
         <select
           className='w-20 rounded-md text-primary lg:w-28'
           value={selected}

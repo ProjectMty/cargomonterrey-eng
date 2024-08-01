@@ -10,10 +10,10 @@ const Us = () => {
         We are your complete cross-border e-commerce solution!
       </h2>
       <p className='text-center'>
-        We're a project 15 years in the making and we are still innovating to
-        improve the way you do global e-commerce. Our area of expertise is
-        cross-border logistics. You ship to Texas, we ship to Mexico and deliver
-        to Amazon FBA, Mercado Libre, or direct to your buyer's door.
+        We&apos;re a project 15 years in the making and we are still innovating to improve the way
+        you do global e-commerce. Our area of expertise is cross-border logistics. You ship to
+        Texas, we ship to Mexico and deliver to Amazon FBA, Mercado Libre, or direct to your
+        buyer&apos;s door.
       </p>
     </section>
   );

@@ -1,4 +1,2 @@
-import AdvantageItem from './advantage-item';
-import AdventagesContainer from './adventages-container';
-
-export { AdvantageItem, AdventagesContainer };
+export { default as AdvantageItem } from './advantage-item';
+export { default as AdventagesContainer } from './adventages-container';

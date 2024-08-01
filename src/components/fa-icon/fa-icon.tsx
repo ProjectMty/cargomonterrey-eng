@@ -1,12 +1,9 @@
 import {
-  FontAwesomeIcon,
-  FontAwesomeIconProps,
-} from '@fortawesome/react-fontawesome';
-import {
-  IconLookup,
-  IconDefinition,
+  type IconDefinition,
+  type IconLookup,
   findIconDefinition,
 } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon, type FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 
 type FaIconProps = Omit<FontAwesomeIconProps, 'icon'> & {
   lookup: [IconLookup['prefix'], IconLookup['iconName']];
