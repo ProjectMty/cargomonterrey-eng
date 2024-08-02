@@ -10,7 +10,12 @@ const poppins = Poppins({
 });
 
 const RootLayout = ({ children }: PropsWithChildren) => {
-  return <main className={`${poppins.variable} font-sans`}>{children}</main>;
+  return (
+    <main className={`${poppins.variable} font-sans`}>
+      {children}
+      <div id='recaptcha-container' className='size-0' />
+    </main>
+  );
 };
 
 export default RootLayout;

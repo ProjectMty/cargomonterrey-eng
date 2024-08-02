@@ -1,42 +1,49 @@
 import { Banner, DaisyNavbar, Footer } from '@/components';
 import { Contact } from '@/sections';
+import Image from 'next/image';
+
+import asdLogo from '@/assets/event/asd-logo.png';
+import cargoTruck from '@/assets/event/cargo-truck.png';
+import CompetitiveIcon from '@/icons/competitive';
+import CrossIcon from '@/icons/cross';
+import ReturnsIcon from '@/icons/returns';
+import RfcIcon from '@/icons/rfc';
+import SpeedIcon from '@/icons/speed';
+import TwentyFourIcon from '@/icons/twenty-four';
 
 const classesTitle = 'text-xl font-bold md:text-3xl xl:text-4xl';
-
-const classesSubtitle = 'text-lg font-bold text-primary md:text-2xl xl:text-3xl';
-
+const classesSubtitle = 'text-lg font-bold text-[#2a235e] md:text-2xl xl:text-3xl';
 const classesText = 'text-base md:text-lg xl:text-2xl';
-
 const services = [
   {
-    icon: '',
+    icon: RfcIcon,
     title: 'RFC',
     description: 'Strategic locations in the US and cross into Mexico within 1 business day',
   },
   {
-    icon: '',
+    icon: CrossIcon,
     title: 'Cross - Border',
     description:
       'Our team is available around the clock to provide expert assistance and ensure your shipments are always on track.',
   },
   {
-    icon: '',
+    icon: ReturnsIcon,
     title: 'Returns',
     description: 'We offers you the lowest costs in the Mexican market.',
   },
   {
-    icon: '',
+    icon: SpeedIcon,
     title: 'Speed And Efficiency',
     description: 'Strategic locations in the US and cross into Mexico within 1 business day',
   },
   {
-    icon: '',
-    title: '24/9 Expert Support',
+    icon: TwentyFourIcon,
+    title: '24/7 Expert Support',
     description:
       'Our team is available around the clock to provide expert assistance and ensure your shipments are always on track.',
   },
   {
-    icon: '',
+    icon: CompetitiveIcon,
     title: 'Competitive Rates',
     description: 'We offers you the lowest costs in the Mexican market.',
   },
@@ -77,9 +84,11 @@ const EventPage = () => {
             reliability.
           </p>
         </div>
-        <div className='size-32 bg-primary' />
+        <Image src={cargoTruck} alt='Cargo Truck' className='w-full md:w-1/2' />
       </section>
-      <div className='mx-auto h-32 w-64 bg-primary' />
+      <section className='mx-auto'>
+        <Image src={asdLogo} alt='Cargo Truck' className='max-w-screen-sm' />
+      </section>
       <section className='space-y-16'>
         <p className={classesTitle}>
           <span className='text-[#5849b0]'>ASD MarketWeek</span>, the perfect opportunity to
@@ -106,8 +115,8 @@ const EventPage = () => {
               key={service.title.toLowerCase()}
               className='flex flex-col items-center justify-center gap-3'
             >
-              <div className='size-32 bg-primary' />
-              <p className='text-lg font-bold text-primary'>{service.title}</p>
+              <service.icon className='size-24 text-[#5849b0]' />
+              <p className='text-lg font-bold text-[#2a235e]'>{service.title}</p>
               <p className='text-base'>{service.description}</p>
             </div>
           ))}

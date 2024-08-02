@@ -94,6 +94,23 @@ h6 {
     color: white;
     text-transform: uppercase;
   }
+  .banner-event {
+    @apply min-h-[calc(100vw*296/360)] space-y-4 sm:min-h-[calc(100vw*830/1920)];
+    background-image: linear-gradient(hsl(248deg 64% 42% / 50%), hsl(248deg 64% 42% / 50%)),
+      url('/images/background-event.jpg');
+    background-color: hsl(248deg 64% 42% / 50%);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+  }
 
   /* Tarifas Cards */
   .tarifas-card {
