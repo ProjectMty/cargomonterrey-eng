@@ -18,18 +18,20 @@ const services = [
   {
     icon: RfcIcon,
     title: 'RFC',
-    description: 'Strategic locations in the US and cross into Mexico within 1 business day',
+    description:
+      'Our RFC lease offers a straightforward and dependable solution for expanding your services into Mexico',
   },
   {
     icon: CrossIcon,
     title: 'Cross - Border',
     description:
-      'Our team is available around the clock to provide expert assistance and ensure your shipments are always on track.',
+      'Strategic locations in the US with cross-border service to Mexico within 1 business day.',
   },
   {
     icon: ReturnsIcon,
     title: 'Returns',
-    description: 'We offers you the lowest costs in the Mexican market.',
+    description:
+      'We understand that returns are a critical component of your business operations, and our service is designed to handle them with precision and care.',
   },
   {
     icon: SpeedIcon,
