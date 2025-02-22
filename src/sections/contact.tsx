@@ -10,7 +10,7 @@ const Contact = ({ title = true }: { title?: boolean }) => {
       )}
       <ContactSection
         title='Start shipping today!'
-        phone='+1 956 451 7191'
+        phone='+1 (956) 648 7402'
         email='info@cargomty.com'
         btnMessage='Send'
         nameInput={{ label: 'Name', placeholder: 'Name' }}

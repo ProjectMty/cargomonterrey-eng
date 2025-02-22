@@ -55,7 +55,7 @@ const ContactSection = ({
           {phone && (
             <ContactIcon icon={faPhone}>
               <Link
-                href={`tel:+${phoneStringToLink(phone)}`}
+                href={`tel:+19566487402`}
                 target='_blank'
                 rel='noopener noreferrer'
                 className='inline-block hover:underline'
